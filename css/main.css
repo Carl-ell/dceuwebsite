@@ -1,15 +1,13 @@
+/* This is to import the cutom font to use, I added the font in folder called 'fonts' */
 @font-face {
   font-family: 'DcFont';
-  /* Name of the font */
   src: url('/fonts/SuicideSupervillains-X334g.ttf') format('woff2');
-  /* Modern browsers */
-  /* Older browsers */
   font-weight: normal;
-  /* Specify weight if needed */
   font-style: normal;
-  /* Specify style if needed */
+
 }
 
+/* Here I apply the font to the body tag of any page that refrences this style sheet */
 body {
   font-family: 'DcFont', sans-serif;
 }
@@ -46,16 +44,14 @@ body {
   flex-direction: column;
   justify-content: space-between;
 }
-
+ /* I split the background image functionality into two part, the .background class and then what ever image you want in its own class, this helps not to rewrite the background properties in each background image */
+.background {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .planet {
   background-image: url("/images/planet.jpg");
-  /* The image used */
-  background-position: center;
-  /* Center the image */
-  background-repeat: no-repeat;
-  /* Do not repeat the image */
-  background-size: cover;
-  /* Resize the background image to cover the entire container */
 }
 
 .header {

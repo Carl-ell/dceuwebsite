@@ -1,13 +1,15 @@
 <!doctype html>
 <html lang="en">
+<!-- I used bootstrap for some of the styling to keep things clean and to write less css, check bootstrap docs if there are things you do not understand. I added comment where I could -->
 
 <head>
   <title>DCEU</title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-   <!-- Fav Icon for browser tab -->
+  <!-- Fav Icon for browser tab -->
   <link rel="icon" type="image/x-icon" href="/images/dcLogo.png">
+
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -15,7 +17,7 @@
   <link rel="stylesheet" href="/css/main.css">
 </head>
 
-<body class="planet">
+<body class="planet background">
   <!-- Top Nav -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="#"> <img src="/images/dcLogo.png" height="55px;" alt=""></a>
@@ -37,8 +39,23 @@
       </ul>
     </div>
   </nav>
-<h1 class="text-light header">Welcome To The DCEU</h1>
-<h3 class="text-light header">Please select film</h3>
+  <!-- Text Header -->
+  <h1 class="text-light header">Welcome To The DCEU</h1>
+  <h3 class="text-light header">Please select film</h3>
+
+  <!-- Below is a great example of using bootstrap to make a componant, we are going to look at how the boxes that you can click on are made. 
+       Bootstrap is simply pre written classes that you can use. -->
+
+  <!-- Step 1: I made a div to place all 3 cards in, this div I gave the p-3 class (bootstrap for style="padding: $spacer") as well as the  d-flex class (Bootstrap for style="display:flex") -->
+
+  <!-- Step 2: Notice that i used a <a> tag to make the body, that is so that the whole component can be clicked. 
+               I gave the <a> tag a class of card (this is a bootstrap class that is very nice to use to make quick components : https://getbootstrap.com/docs/4.0/components/card/ please go check docs).
+               I also add text-left (bootstrap for style="text-align:left;")  and then m-2 class (bootstrap for style="margin: $spacer")-->
+  <!-- Step 3: The rest of the sections inside the card divides the card into two sections, the image section with class card-image-top and the body section with class card-body, 
+               the bosy section contain a Title and a section for text content -->
+
+  <!-- *NOTE: I further customise the card class in main.css by refrencing the class name -->
+   
   <!-- Cards -->
   <div class="p-3 d-flex">
     <a href="/pages/manOfSteel.html" class="card text-left m-2">
@@ -63,8 +80,7 @@
       </div>
     </a>
   </div>
-
-
+  <!-- Below is for future use This page is bootstrap ready -->
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
